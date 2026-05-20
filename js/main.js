@@ -30,6 +30,18 @@ const projectData = [
     code: 'https://github.com/dizzi1222',
     live: '#',
     screenshot: '⚙️'
+  },
+  {
+    id: 3,
+    title: 'PTD-Talento',
+    desc: 'Marketplace de talento para Cincinnatus Institute. MVP completo con autenticación, catálogo de estudiantes, watch list de reclutadores, panel admin y notificaciones. Arquitectura MERN con Docker.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Docker', 'Figma'],
+    code: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-back',
+    live: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-front',
+    screenshot: '🏗️',
+    isPrivate: true,
+    backUrl: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-back',
+    frontUrl: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-front'
   }
 ];
 
@@ -45,7 +57,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // Keyboard navigation (Vim-style)
-const sections = ['hero', 'tech', 'projects', 'contact'];
+const sections = ['hero', 'tech', 'projects', 'design', 'contact'];
 let currentSection = 0;
 
 document.addEventListener('keydown', (e) => {
@@ -80,6 +92,7 @@ document.addEventListener('keydown', (e) => {
     case '2':
     case '3':
     case '4':
+    case '5':
       const sectionIndex = parseInt(key) - 1;
       if (sections[sectionIndex]) {
         document.getElementById(sections[sectionIndex]).scrollIntoView({ behavior: 'smooth' });
@@ -146,7 +159,13 @@ function openProjectModal(id) {
   const tagsEl = document.getElementById('modal-tags');
   tagsEl.innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
   const linksEl = document.getElementById('modal-links');
-  linksEl.innerHTML = `
+  linksEl.innerHTML = p.isPrivate
+    ? `
+    <a href="${p.backUrl}" target="_blank" class="btn"> Backend (Repo)</a>
+    <a href="${p.frontUrl}" target="_blank" class="btn btn--filled"> Frontend (Repo)</a>
+    <span class="tag" style="align-self:center">🔒 Privado</span>
+  `
+    : `
     <a href="${p.code}" target="_blank" class="btn"> View Code</a>
     <a href="${p.live}" target="_blank" class="btn btn--filled"> Live Preview</a>
   `;
@@ -164,6 +183,59 @@ document.addEventListener('DOMContentLoaded', () => {
     if (id < projectData.length) {
       win.style.cursor = 'pointer';
       win.addEventListener('click', () => openProjectModal(id));
+    }
+  });
+
+  // Tech descriptions data
+  const techData = {
+    'Node.js': 'Runtime JS del lado del servidor. Lo uso para construir APIs RESTful y backends escalables con Express.',
+    'Express': 'Framework minimalista para Node.js. Mi elección para crear servidores, middlewares y APIs limpias.',
+    'React': 'Biblioteca de UI declarativa. Construyo interfaces interactivas con componentes y hooks reutilizables.',
+    'MongoDB': 'Base de datos NoSQL. La uso como principal almacenamiento en mis proyectos MERN con Mongoose.',
+    'Git': 'Control de versiones esencial. Flujo con feature branches, rebase interactivo y commits semánticos.',
+    'Arch': 'Mi daily driver. Arch Linux + Hyprland, todo configurado desde cero con dotfiles propios.',
+    'Neovim': 'Editor principal con LazyVim. Plugins personalizados, LSP para TS/JS, y flujo 100% teclado.',
+    'Figma': 'Diseño de interfaces y prototipado. Design systems, componentes reutilizables y colaboración en equipo.',
+    'Google Stitch': 'Prototipado con IA. Generación rápida de mockups y exploración de variantes de diseño.',
+    'TypeScript': 'Tipado estático para JS. Código más robusto y mantenible en backend y frontend.',
+    'Docker': 'Contenedores para desarrollo y producción. Entornos reproducibles y despliegues consistentes.'
+  };
+
+  // Random tech popup
+  const popupEl = document.createElement('div');
+  popupEl.className = 'tech-popup';
+  document.body.appendChild(popupEl);
+
+  document.querySelectorAll('.icon-grid__item').forEach(item => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', (e) => {
+      const label = item.querySelector('.icon-grid__label');
+      if (!label) return;
+      const name = label.textContent;
+      const desc = techData[name];
+      if (!desc) return;
+      popupEl.textContent = `${name}: ${desc}`;
+      popupEl.style.display = 'block';
+
+      // Position near the click
+      const rect = item.getBoundingClientRect();
+      const popupW = 320;
+      let left = rect.left + rect.width / 2 - popupW / 2;
+      if (left < 10) left = 10;
+      if (left + popupW > window.innerWidth - 10) left = window.innerWidth - popupW - 10;
+      popupEl.style.left = left + 'px';
+      popupEl.style.top = (rect.bottom + 8) + 'px';
+
+      // Auto-hide after 2.5s
+      clearTimeout(popupEl._hideTimer);
+      popupEl._hideTimer = setTimeout(() => { popupEl.style.display = 'none'; }, 2500);
+    });
+  });
+
+  // Click anywhere else closes popup
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.icon-grid__item') && !e.target.closest('.tech-popup')) {
+      popupEl.style.display = 'none';
     }
   });
 });
