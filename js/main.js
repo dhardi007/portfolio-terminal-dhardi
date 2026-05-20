@@ -195,8 +195,8 @@ function typeWriter(element, text, speed = 50) {
 
 // Initialize any additional effects when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Add subtle animation to windows on scroll
-  const windows = document.querySelectorAll('.window');
+  // Add subtle animation to windows on scroll (exclude modal)
+  const windows = document.querySelectorAll('.window:not(.modal-window)');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
