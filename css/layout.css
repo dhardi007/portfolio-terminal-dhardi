@@ -83,7 +83,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  min-height: 90vh;
   padding: var(--gap-xl) 0;
   gap: var(--gap-lg);
 }
@@ -146,6 +148,11 @@
   60%  { clip-path: inset(60% 0 20% 0); transform: translate(1px, -2px); }
   80%  { clip-path: inset(80% 0 0 0); transform: translate(-2px, 1px); }
   100% { clip-path: inset(0 0 80% 0); transform: translate(2px, -1px); }
+}
+
+.hero .window {
+  position: relative;
+  z-index: 2;
 }
 
 .hero__intro {

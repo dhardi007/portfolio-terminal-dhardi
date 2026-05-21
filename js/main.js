@@ -63,6 +63,36 @@ const i18n = {
     projects: { code: 'View Code', live: 'Live Preview', private: 'Private', open: '▶ Open project' },
     contact: { available: 'Available' },
     footer: { commercial: '→ Commercial Version' }
+  },
+  de: {
+    hero: { tagline: 'MERN Stack Entwickler | Arch Linux Enthusiast | Neovim + LazyVim' },
+    sections: { tech: 'Tech Stack', design: 'Design', projects: 'Projekte', about: 'Über mich', contact: 'Kontakt' },
+    tech: {
+      hint: 'Klicke auf eine Technologie, um mehr zu erfahren',
+      'Node.js': 'Server-seitige JS-Laufzeitumgebung. Ich nutze es für RESTful APIs und skalierbare Backends mit Express.',
+      'Express': 'Minimalistisches Node.js-Framework. Meine Wahl für saubere Server, Middleware und APIs.',
+      'React': 'Deklarative UI-Bibliothek. Ich erstelle interaktive Oberflächen mit wiederverwendbaren Komponenten und Hooks.',
+      'MongoDB': 'NoSQL-Datenbank. Primärer Speicher in meinen MERN-Projekten mit Mongoose.',
+      'Git': 'Wesentliche Versionskontrolle. Workflow mit Feature-Branches, interaktivem Rebase und semantischen Commits.',
+      'Arch': 'Mein Daily Driver. Arch Linux + Hyprland, alles von Grund auf mit eigenen Dotfiles konfiguriert.',
+      'Neovim': 'Haupteditor mit LazyVim. Eigene Plugins, LSP für TS/JS, 100% Tastatur-Workflow.',
+      'TypeScript': 'Statische Typisierung für JS. Robusterer und wartbarerer Code in Backend und Frontend.',
+      'Docker': 'Container für Entwicklung und Produktion. Reproduzierbare Umgebungen und konsistente Deployments.',
+      'Figma': 'Interface-Design und Prototyping. Designsysteme, wiederverwendbare Komponenten und Teamarbeit.',
+      'Google Stitch': 'KI-gestütztes Prototyping. Schnelle Mockup-Generierung und Design-Varianten-Erkundung.',
+      'Design System': 'Atomare Designsysteme mit Tailwind, Storybook und garantierter visueller Konsistenz.',
+      'Prototyping': 'Interaktives Prototyping von Low-Fi-Wireframes bis High-Fi in Figma.'
+    },
+    about: {
+      name: 'Diego Härdi', role: 'DevOps & Software Engineer',
+      born: 'San Pedro de Macorís, DR', lives: 'Jarabacoa, DR',
+      passport: '🇨🇭 Schweizer', os: 'Arch Linux · Hyprland', editor: 'Neovim · LazyVim',
+      langs: 'ES · EN · DE (A2)',
+      bio: 'Tagsüber entwickle ich Full-Stack-Apps mit dem MERN-Stack. Nachts tauche ich in Neovim-Konfigurationen ein, optimiere mein Arch Linux Hyprland oder automatisiere Workflows, die es gar nicht geben sollte. Ich spreche TypeScript, JavaScript, Lua und die Sprache von sauberen, wartbaren Systemen.'
+    },
+    projects: { code: 'Quellcode', live: 'Live-Vorschau', private: 'Privat', open: '▶ Projekt öffnen' },
+    contact: { available: 'Verfügbar' },
+    footer: { commercial: '→ Kommerzielle Version' }
   }
 };
 
@@ -104,6 +134,8 @@ function updateProjectCards() {
     const descEl = win.querySelector('p');
     if (titleEl) titleEl.textContent = p.title;
     if (descEl) descEl.textContent = p.descEn && lang === 'en' ? p.descEn : p.desc;
+    const btn = win.querySelector('button');
+    if (btn) btn.innerHTML = `${ghIcon} ${t('projects.open')}`;
   });
 }
 
@@ -341,10 +373,14 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// ---- Language toggle ----
+// ---- Language toggle (ES → EN → DE → ES) ----
+const langOrder = ['es', 'en', 'de'];
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('#lang-btn');
-  if (btn) switchLanguage(lang === 'es' ? 'en' : 'es');
+  if (btn) {
+    const idx = langOrder.indexOf(lang);
+    switchLanguage(langOrder[(idx + 1) % langOrder.length]);
+  }
 });
 
 // ---- Theme init ----
