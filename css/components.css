@@ -308,6 +308,17 @@
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
+.cert-modal-card {
+  background: var(--bg-window);
+  border: 1px solid var(--text-dim);
+  padding: var(--gap-md);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+.cert-modal-card:hover {
+  border-color: var(--accent-tertiary);
+}
+
 /* ===== TECH POPUP ===== */
 .tech-popup {
   display: none;
