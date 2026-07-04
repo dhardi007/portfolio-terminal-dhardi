@@ -20,6 +20,15 @@ Un portafolio web interactivo inspirado en la estética de la **terminal (CLI)**
 - **Ligero y Rápido:** Sin dependencias externas pesadas ni frameworks innecesarios.
 - **Optimización SEO:** Estructura preparada para indexación básica.
 
+## 🎓 Certificaciones
+
+| Certificación | Estado | Progreso |
+|---|---|---|
+| **CIC Associate Developer** — Cincinnatus Bootcamp | 🟡 En proceso | ████████░░ 44% |
+| **JSCAMP — Midudev Bootcamp** | 🟡 Cursando | ██░░░░░░░░ 20% |
+| **Mimo Full-Stack Development** | 🟡 Cursando | ██░░░░░░░░ 15% |
+| **Exercism · TryHackMe** | ⚪ Iniciando | █░░░░░░░░░ 10% |
+
 ## 📂 Estructura del Proyecto
 
 ```bash

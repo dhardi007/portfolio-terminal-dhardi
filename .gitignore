@@ -23,3 +23,11 @@ yarn-debug.log*
 yarn-error.log*
 .file_ignore
 
+# SvelteKit
+.svelte-kit/
+.vercel/
+.vscode/
+
+# Old static assets (migrated to static/)
+/assets/
+
