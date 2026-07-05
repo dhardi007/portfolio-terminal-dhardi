@@ -4,6 +4,7 @@
 
   let visible = $state(true);
   let lastScrollY = 0;
+  let detailOpen = $state(false);
 
   function scrollTo(id: Section) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -11,6 +12,7 @@
 
   onMount(() => {
     const handleScroll = () => {
+      if (detailOpen) return;
       const currentY = window.scrollY;
       if (currentY > lastScrollY && currentY > 80) {
         visible = false;
@@ -20,7 +22,17 @@
       lastScrollY = currentY;
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const onOpen = () => { detailOpen = true; visible = false; };
+    const onClose = () => { detailOpen = false; visible = true; };
+    document.addEventListener('detail-open', onOpen);
+    document.addEventListener('detail-close', onClose);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('detail-open', onOpen);
+      document.removeEventListener('detail-close', onClose);
+    };
   });
 
   const sectionLabels: Record<Section, string> = {
@@ -61,7 +73,6 @@
     z-index: 999;
     transform: translateY(0);
     transition: transform 0.3s ease;
-    background: rgba(18,18,18,0.85);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-bottom: 2px solid var(--accent-secondary);

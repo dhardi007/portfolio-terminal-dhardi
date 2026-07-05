@@ -62,11 +62,13 @@
     maximized = true;
     const p = projectData.find(x => x.id === id);
     if (p) detailProject = p;
+    document.dispatchEvent(new CustomEvent('detail-open'));
   }
 
   function closeDetail() {
     detailProject = null;
     maximized = true;
+    document.dispatchEvent(new CustomEvent('detail-close'));
   }
 
   function toggleMaximize() {
