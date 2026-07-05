@@ -36,19 +36,6 @@
   --scanline-opacity: 0.02;
 }
 
-.modal-window {
-  max-width: 600px;
-  width: 90%;
-  max-height: 85vh;
-  overflow-y: auto;
-  z-index: 1;
-}
-
-.modal-window:hover {
-  animation: none;
-  transform: none;
-}
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -174,6 +161,19 @@ code, pre {
   0% { transform: scale(1) rotate(0deg); }
   70% { transform: scale(1.07) rotate(2deg); }
   100% { transform: scale(1.05) rotate(1deg); }
+}
+
+.modal-window {
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.modal-window:hover {
+  animation: none;
+  transform: none;
 }
 
 .window__titlebar {
