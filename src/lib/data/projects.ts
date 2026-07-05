@@ -37,7 +37,7 @@ El diseño responsivo y la organización modular del código permiten escalar la
 The app includes interactive charts for data visualization, a functional calculator, a counter system and a persistent TO-DO list. Each module is an independent component that communicates with the global application state.
 
 The responsive design and modular code organization allow scaling the app by adding new tools without affecting existing ones. TO-DO list data persists between sessions using localStorage, demonstrating client-side persistence.`,
-    tags: ['React', 'Node.js', 'MongoDB'],
+    tags: ['React', 'Node.js', 'MongoDB', 'TypeScript'],
     code: 'https://github.com/dizzi1222/REACT-Diego-Dizzi-Dashboard',
     live: 'https://dhardi007.github.io/REACT-Diego-Dizzi-Dashboard/',
     image: '/modal-tech-Dashboard-REACT.png',
@@ -63,7 +63,7 @@ El diseño prioriza la experiencia de usuario con animaciones suaves, transicion
 The page features interactive modals for each project, scroll-spy navigation that updates the active section automatically, and a light/dark theme system that remembers user preference. Project data is loaded dynamically from a JSON file.
 
 The design prioritizes user experience with smooth animations, section transitions and a clean visual presentation that puts content first. All code is organized following clean code principles.`,
-    tags: ['HTML', 'Tailwind', 'JavaScript'],
+    tags: ['HTML', 'Tailwind', 'JavaScript', 'Astro'],
     code: 'https://github.com/dizzi1222/dhardi.dev',
     live: 'https://dizzi1222.github.io/dhardi.dev/',
     image: '/modal-tech-devto.png',
@@ -115,7 +115,7 @@ El proyecto incluye integración con Google Cloud para despliegue, Cloud SQL Pro
 The frontend is built with React and TypeScript, with a custom design system (CIC-Styles) in Figma. The backend uses Node.js with Express, PostgreSQL as main database, and Docker for containerization. The architecture follows clean code principles and separation of concerns.
 
 The project includes Google Cloud integration for deployment, Cloud SQL Proxy for secure database connections, and a complete CI/CD flow. Project management uses GitHub Projects following agile methodologies.`,
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Figma'],
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Figma', 'TypeScript'],
     code: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-back',
     live: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-front',
     image: '/modal-tech-ptd-talento.png',
@@ -174,9 +174,9 @@ El diseño responsivo garantiza una experiencia óptima tanto en escritorio como
 The app includes an automatic budget calculation system, currency conversion and categorized expense visualization. Data is managed entirely on the frontend with local persistence, demonstrating CRUD capabilities without a backend.
 
 The responsive design ensures an optimal experience on both desktop and mobile devices. The clean and organized interface facilitates navigation between the different sections of the application.`,
-    tags: ['JavaScript', 'HTML', 'CSS'],
+    tags: ['JavaScript', 'HTML', 'CSS', 'TypeScript', 'Tailwind', 'Docker'],
     code: 'https://github.com/dhardi007/PCE-Agencia',
-    live: 'https://github.com/dhardi007/PCE-Agencia',
+    live: 'https://pce-git-main-dizzi.vercel.app/',
     image: '/modal-tech-pce-agencia-reskyt.png',
     status: 'Completado',
     statusEn: 'Completed',
@@ -200,7 +200,7 @@ El proyecto refleja sensibilidad artística y habilidad para crear interfaces co
 Built with HTML, CSS and vanilla JavaScript, the page demonstrates how web technologies can be used to express emotions and create meaningful experiences beyond traditional applications. CSS animations and visual effects contribute to the atmosphere without sacrificing performance.
 
 The project reflects artistic sensitivity and ability to create emotionally charged interfaces, demonstrating versatility beyond conventional application development.`,
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['TypeScript'],
     code: 'https://github.com/dizzi1222/proyeccion-astral-disculpa',
     live: 'https://dizzi1222.github.io/proyeccion-astral-disculpa/',
     image: '/modal-proyeccion-astral.png',

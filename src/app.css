@@ -621,10 +621,10 @@ code, pre {
   transition: all 0.2s;
 }
 .header-btn:hover { border-color: var(--accent-tertiary); color: var(--accent-tertiary); }
-.available-badge { display: flex; align-items: center; gap: var(--gap-xs); color: var(--accent-tertiary); }
+.available-badge { display: flex; align-items: center; gap: var(--gap-xs); color: #33c08c; }
 .available-dot {
   width: 8px; height: 8px;
-  background: var(--accent-tertiary);
+  background: #33c08c;
   border-radius: 50%;
   animation: blink 1s step-end infinite;
 }

@@ -14,9 +14,28 @@
   let showModal = $state(false);
   let certFrame = $state(0);
 
+  function openModal() {
+    showModal = true;
+    document.dispatchEvent(new CustomEvent('detail-open'));
+  }
+  function closeModal() {
+    showModal = false;
+    document.dispatchEvent(new CustomEvent('detail-close'));
+  }
+
   $effect(() => {
     const interval = setInterval(() => certFrame = (certFrame + 1) % 4, 400);
     return () => clearInterval(interval);
+  });
+
+  function onKeydown(e: KeyboardEvent) {
+    if (e.key === 'Escape') closeModal();
+  }
+  $effect(() => {
+    if (showModal) {
+      document.addEventListener('keydown', onKeydown);
+      return () => document.removeEventListener('keydown', onKeydown);
+    }
   });
 
   const certFrames = ['◴', '◷', '◶', '◵'];
@@ -60,7 +79,7 @@
         </div>
       </div>
       <div style="margin-top:var(--gap-md);padding-top:var(--gap-md);border-top:1px solid var(--text-dim)">
-        <div class="terminal-line cert-download-line" onclick={() => showModal = true} onkeydown={(e) => { if (e.key === 'Enter') showModal = true; }} role="button" tabindex="0">
+        <div class="terminal-line cert-download-line" onclick={openModal} onkeydown={(e) => { if (e.key === 'Enter') openModal(); }} role="button" tabindex="0">
           <span class="terminal-line__prompt">$</span>
           <span class="terminal-line__cmd" style="color:var(--accent-tertiary)">{t('cert.download')}</span>
           <span class="cert-ver-detalles">▶ ver detalles</span>
@@ -74,7 +93,7 @@
 {#if showModal}
   <div class="modal-overlay active">
     <!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
-    <div class="modal-backdrop" onclick={() => showModal = false} role="presentation"></div>
+    <div class="modal-backdrop" onclick={closeModal} role="presentation"></div>
     <div class="window modal-window" style="max-width:560px">
       <div class="window__titlebar">
         <div class="window__titlebar-dots">
@@ -83,7 +102,7 @@
           <span class="window__titlebar-dot"></span>
         </div>
         <span style="color:var(--accent-tertiary)">certificaciones.json</span>
-        <button class="modal-close-btn" onclick={() => showModal = false}>✕</button>
+        <button class="modal-close-btn" onclick={closeModal}>✕</button>
       </div>
       <div class="window__content" style="padding:0">
         <div class="terminal-line" style="padding:var(--gap-md) var(--gap-lg) 0">
@@ -114,17 +133,17 @@
 <style>
   .cert-download-line {
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: border-color 0.2s ease;
     border-radius: 4px;
     padding: 0.25rem 0.5rem;
     margin: 0 -0.5rem;
+    border: 1px solid transparent;
   }
   .cert-download-line:hover {
-    background: rgba(233, 69, 96, 0.08);
+    border-color: var(--text-primary);
   }
   .cert-download-line:hover .cert-ver-detalles {
-    color: var(--accent-tertiary) !important;
-    text-shadow: 0 0 8px rgba(233, 69, 96, 0.4);
+    color: var(--text-primary) !important;
   }
   .cert-ver-detalles {
     color: var(--text-dim);
