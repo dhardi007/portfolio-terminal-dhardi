@@ -349,6 +349,7 @@ const tagSvg: Record<string, string> = {
     border-color: #7730b8;
     color: #fff;
     box-shadow: 0 0 16px #7730b8, 0 0 32px rgba(119,48,184,0.4);
+    transform: translateY(-2px);
   }
 
   .detail-meta {

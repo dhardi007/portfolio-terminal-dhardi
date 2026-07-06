@@ -90,7 +90,7 @@ Each component is configured to integrate seamlessly with the others, creating a
 
 The project also includes automated installation scripts to facilitate environment reproduction on new machines, demonstrating skills in automation, Bash scripting and Linux system management.`,
     tags: ['Lua', 'Shell', 'YAML', 'Python'],
-    code: 'https://github.com/dizzi1222/dotfiles-dizzi',
+    code: 'https://github.com/dizzi1222/dotfiles-wsl-dizzi',
     live: 'https://github.com/dizzi1222/dotfiles-dizzi',
     image: '/modal-tech-dotfiles.png',
     status: 'En desarrollo',
@@ -146,7 +146,7 @@ The configuration includes full LSP support for TypeScript, JavaScript, Lua and 
 The project demonstrates skills in developer tool configuration, cross-platform dependency management and developer workflow optimization.`,
     tags: ['Lua', 'LazyVim', 'Neovim'],
     code: 'https://github.com/dizzi1222/nvim',
-    live: 'https://github.com/dizzi1222/nvim-wsl',
+    live: 'https://github.com/dizzi1222/nvim/tree/termux',
     image: '/modal-tech-nvim.png',
     nvimScreenshots: [
       'https://github.com/user-attachments/assets/9144215e-6156-43c3-beba-4cca7f431337',
