@@ -106,6 +106,12 @@
           </svg>
           <span class="icon-grid__label">{i18n[currentLang].design.proto}</span>
         </div>
+        <div class="icon-grid__item" role="button" tabindex="0" onclick={() => showTooltip('Canvas')} onkeydown={(e) => e.key === 'Enter' && showTooltip('Canvas')}>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span class="icon-grid__label">{i18n[currentLang].design.canvas}</span>
+        </div>
       </div>
       <p style="margin-top:var(--gap-md);color:var(--text-muted);font-size:0.85rem">
         {i18n[currentLang].design.hint}

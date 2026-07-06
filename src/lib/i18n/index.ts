@@ -28,19 +28,23 @@ export const i18n = {
       'Tailwind CSS': 'Framework de CSS utility-first. Prototipado rápido, consistencia visual y sin CSS repetitivo.',
       'Render': 'Plataforma de cloud hosting. Despliego apps full-stack con despliegue continuo desde Git.',
       'Vercel': 'Cloud platform para frontends. Deploy de apps React/Next.js con serverless functions.',
-      'Google Cloud': 'Cloud provider con servicios de infraestructura. Lo uso para proyectos que requieren escalabilidad.',
+      'Google Cloud': 'Cloud Run para backends serverless, App Engine para frontends con dominios .com. Cloud SQL, gcloud CLI y despliegue con domains RUN.app / APPSPOT.com.',
       'Svelte': 'Framework reactivo. Compila a JS optimizado, sin virtual DOM. Lo uso para apps rápidas y ligeras.',
       'Astro': 'Generador de sitios estáticos. Islands architecture, cero JS por defecto, ideal para contenido.',
       'Google Stitch': 'Prototipado con IA. Generación rápida de mockups y exploración de variantes de diseño.',
       'Design System': 'Sistemas de diseño atómicos con Tailwind, Storybook y consistencia visual garantizada.',
-      'Prototyping': 'Prototipado interactivo desde wireframes low-fi hasta high-fi en Figma.'
+      'Prototyping': 'Prototipado interactivo desde wireframes low-fi hasta high-fi en Figma.',
+      'Canvas': 'Canvas de diseño e ilustración. Maquetación de interfaces UI, storytelling visual y exploración de layouts.',
+      'VoltBuilder': 'Build service para apps nativas Android/iOS desde web apps (Cordova/Capacitor). APK sin SDKs locales ni Mac requerido.',
+      'Material UI': 'Biblioteca de componentes React basada en Material Design. UI profesional con temas, grids y accesibilidad.'
     },
     design: {
       hint: 'Diseño UX/UI — Prototipado con Google Stitch, maquetado en Figma. Creación y mantenimiento de Design Systems (CIC-Styles).',
       figma: 'Figma',
       stitch: 'Google Stitch',
       ds: 'Design System',
-      proto: 'Prototyping'
+      proto: 'Prototyping',
+      canvas: 'Canvas'
     },
     about: {
       name: 'Diego Härdi', role: 'DevOps & Software Engineer',
@@ -91,19 +95,23 @@ export const i18n = {
       'Tailwind CSS': 'Utility-first CSS framework. Rapid prototyping, visual consistency.',
       'Render': 'Cloud hosting platform. Full-stack apps with continuous deploy from Git.',
       'Vercel': 'Cloud platform for frontends. React/Next.js with serverless functions.',
-      'Google Cloud': 'Infrastructure cloud provider. For projects requiring scalability.',
+      'Google Cloud': 'Cloud Run for serverless backends, App Engine for frontends with custom .com domains. Cloud SQL, gcloud CLI, deployment on RUN.app / APPSPOT.com.',
       'Svelte': 'Reactive framework. Compiles to optimized JS, no virtual DOM. Fast, lightweight apps.',
       'Astro': 'Static site generator. Islands architecture, zero JS by default, great for content.',
       'Google Stitch': 'AI-powered prototyping. Rapid mockup generation and design exploration.',
       'Design System': 'Atomic design systems with Tailwind, Storybook. Guaranteed visual consistency.',
-      'Prototyping': 'Interactive prototyping from low-fi wireframes to high-fi in Figma.'
+      'Prototyping': 'Interactive prototyping from low-fi wireframes to high-fi in Figma.',
+      'Canvas': 'Design and illustration canvas. User interface mockups, visual storytelling, layout exploration.',
+      'VoltBuilder': 'Build service for native Android/iOS apps from web apps (Cordova/Capacitor). APK without local SDKs or Mac required.',
+      'Material UI': 'React component library based on Material Design. Professional UI with themes, grids and accessibility.'
     },
     design: {
       hint: 'UX/UI Design — Prototyping with Google Stitch, layout in Figma. Design Systems creation (CIC-Styles).',
       figma: 'Figma',
       stitch: 'Google Stitch',
       ds: 'Design System',
-      proto: 'Prototyping'
+      proto: 'Prototyping',
+      canvas: 'Canvas'
     },
     about: {
       name: 'Diego Härdi', role: 'DevOps & Software Engineer',
@@ -154,19 +162,23 @@ export const i18n = {
       'Tailwind CSS': 'Utility-first CSS-Framework. Schnelles Prototyping, visuelle Konsistenz.',
       'Render': 'Cloud-Hosting-Plattform. Full-Stack-Apps mit Continuous Deploy.',
       'Vercel': 'Cloud-Plattform für Frontends. React/Next.js mit serverlosen Funktionen.',
-      'Google Cloud': 'Infrastruktur-Cloud-Anbieter. Für Projekte mit Skalierbarkeit.',
+      'Google Cloud': 'Cloud Run für serverlose Backends, App Engine für Frontends mit benutzerdefinierten .com-Domains. Cloud SQL, gcloud CLI, Deployment auf RUN.app / APPSPOT.com.',
       'Svelte': 'Reaktives Framework. Kompiliert zu optimiertem JS, kein virtuelles DOM.',
       'Astro': 'Static-Site-Generator. Islands-Architektur, standardmäßig kein JS.',
       'Google Stitch': 'KI-gestütztes Prototyping. Schnelle Mockup-Generierung.',
       'Design System': 'Atomare Designsysteme mit Tailwind, Storybook.',
-      'Prototyping': 'Interaktives Prototyping von Low-Fi bis High-Fi in Figma.'
+      'Prototyping': 'Interaktives Prototyping von Low-Fi bis High-Fi in Figma.',
+      'Canvas': 'Design- und Illustrations-Canvas. UI-Mockups, visuelles Storytelling, Layout-Erkundung.',
+      'VoltBuilder': 'Build-Dienst für native Android/iOS-Apps aus Web-Apps (Cordova/Capacitor). APK ohne lokale SDKs oder Mac erforderlich.',
+      'Material UI': 'React-Komponentenbibliothek basierend auf Material Design. Professionelle UI mit Themes und Zugänglichkeit.'
     },
     design: {
       hint: 'UX/UI-Design — Prototyping mit Google Stitch, Layout in Figma. Designsysteme (CIC-Styles).',
       figma: 'Figma',
       stitch: 'Google Stitch',
       ds: 'Design System',
-      proto: 'Prototyping'
+      proto: 'Prototyping',
+      canvas: 'Canvas'
     },
     about: {
       name: 'Diego Härdi', role: 'DevOps & Software Engineer',

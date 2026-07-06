@@ -39,7 +39,7 @@ The app includes interactive charts for data visualization, a functional calcula
 The responsive design and modular code organization allow scaling the app by adding new tools without affecting existing ones. TO-DO list data persists between sessions using localStorage, demonstrating client-side persistence.`,
     tags: ['React', 'Node.js', 'MongoDB', 'TypeScript'],
     code: 'https://github.com/dizzi1222/REACT-Diego-Dizzi-Dashboard',
-    live: 'https://reactdashboarddh-one.vercel.app/',
+    live: 'https://react-dashboard-ten-delta.vercel.app/',
     image: '/modal-tech-Dashboard-REACT.png',
     status: 'Completado',
     statusEn: 'Completed',
@@ -115,9 +115,9 @@ El proyecto incluye integración con Google Cloud para despliegue, Cloud SQL Pro
 The frontend is built with React and TypeScript, with a custom design system (CIC-Styles) in Figma. The backend uses Node.js with Express, PostgreSQL as main database, and Docker for containerization. The architecture follows clean code principles and separation of concerns.
 
 The project includes Google Cloud integration for deployment, Cloud SQL Proxy for secure database connections, and a complete CI/CD flow. Project management uses GitHub Projects following agile methodologies.`,
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Figma', 'TypeScript'],
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Figma', 'TypeScript', 'Material UI'],
     code: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-back',
-    live: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-front',
+    live: 'https://ptd-talento-front.vercel.app',
     image: '/modal-tech-ptd-talento.png',
     isPrivate: true,
     backUrl: 'https://github.com/Cincinnatus-Institute-of-Craftsmanship/ptd-talento-back',
@@ -202,7 +202,7 @@ It was my first real experience building a complete site for a local business: p
 Here I learned Bootstrap templates, reusable CSS components, native JavaScript drag scroll and fundamental responsive web design concepts. A prehistoric but formative stage where every line of code was a discovery.`,
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     code: 'https://github.com/dizzi1222/FCTicService.github.6c-Diego-05',
-    live: 'https://dizzi1222.github.io/FCTicService.github.6c-Diego-05/',
+    live: 'https://fc-tic-service-github-6c-diego-05.vercel.app/',
     image: '/modal-ticservice.png',
     status: 'Completado',
     statusEn: 'Completed',
@@ -230,9 +230,9 @@ It was a group project where, spoiler, I ended up doing it practically alone. My
 With zero experience and being a complete rookie, it was a horrible experience for inexperienced Dieguito who wasn't a Vibe Coder Pro. I passed, but the process was a headache.
 
 Years later, I modernized the project to Vite 5 + Tailwind CSS v4 + glassmorphism, with 8 complete pages, splash screen, scroll-based animations and responsive design. The APK is available via Volt Build.`,
-    tags: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Canvas'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Canvas', 'VoltBuilder'],
     code: 'https://github.com/dizzi1222/Proyecto-App-MCSD',
-    live: 'https://apps.volt.build/1d496dbf-1137-4fec-92d0-29c05aac9a3e/android.debug.apk',
+    live: 'https://proyecto-app-mcsd.vercel.app/',
     image: '/modal-mcsd.png',
     status: 'Completado',
     statusEn: 'Completed',

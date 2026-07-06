@@ -41,6 +41,11 @@
   const certFrames = ['◴', '◷', '◶', '◵'];
 
   const certs = [
+    { title: 'Desarrollo de Software v4', status: 'completed', progress: '100%', issuer: 'CIC · RadarX', statusColor: '#4ade80', progColor: '#4ade80' },
+    { title: 'Inteligencia Artificial para Todos v1', status: 'completed', progress: '100%', issuer: 'CIC · RadarX', statusColor: '#4ade80', progColor: '#4ade80' },
+    { title: 'Fundamentos de Pensamiento Crítico v4', status: 'completed', progress: '100%', issuer: 'CIC · RadarX', statusColor: '#4ade80', progColor: '#4ade80' },
+    { title: 'Mi primer empleo en Tech', status: 'completed', progress: '100%', issuer: 'CIC · Panel', statusColor: '#4ade80', progColor: '#4ade80' },
+    { title: 'Curso de IA para Todos', status: 'completed', progress: '100%', issuer: 'CIC · Panel', statusColor: '#4ade80', progColor: '#4ade80' },
     { title: 'CIC Associate Developer', status: 'in_progress', progress: '44%', issuer: 'Cincinnatus Bootcamp', statusColor: 'var(--accent-tertiary)', progColor: 'var(--accent-secondary)' },
     { title: 'JSCAMP — Midudev Bootcamp', status: 'in_progress', progress: '20%', issuer: 'Midudev', statusColor: 'var(--accent-tertiary)', progColor: 'var(--accent-secondary)' },
     { title: 'Mimo Full-Stack Development', status: 'in_progress', progress: '15%', issuer: 'Mimo GmbH', statusColor: 'var(--accent-tertiary)', progColor: 'var(--accent-secondary)' },
