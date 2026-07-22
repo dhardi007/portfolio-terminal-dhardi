@@ -6,7 +6,8 @@ export const lang = writable<Lang>('es');
 export const langOrder: Lang[] = ['es', 'en', 'de'];
 
 export function initLang() {
-  const saved = (localStorage.getItem('terminal-lang') as Lang) || 'es';
+  const browserLang: Lang = navigator.language?.startsWith('de') ? 'de' : navigator.language?.startsWith('en') ? 'en' : 'es';
+  const saved = (localStorage.getItem('terminal-lang') as Lang) || browserLang;
   lang.set(saved);
 }
 
