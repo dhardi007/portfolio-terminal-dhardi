@@ -355,6 +355,35 @@ The project reflects artistic sensitivity and ability to create emotionally char
     teamSize: 'Solo',
     teamSizeEn: 'Solo',
     teamSizeDe: 'Allein'
+  },
+  {
+    id: 9, title: 'Workspace',
+    desc: 'MCP things maybe?',
+    descEn: 'MCP things maybe?',
+    descDe: 'MCP-Dinge vielleicht?',
+    detailDesc: `Workspace con proyectos como submódulos y repos independientes.
+    
+Un monorepo flexible para experimentar con MCP (Model Context Protocol): proyectos como submódulos git y repos independientes, todo orquestado desde un solo lugar.`,
+    detailDescEn: `Workspace with projects as submodules and standalone repos.
+
+A flexible monorepo to experiment with MCP (Model Context Protocol): projects as git submodules and standalone repos, all orchestrated from a single place.`,
+    detailDescDe: `Workspace mit Projekten als Submodule und eigenständigen Repos.
+
+Ein flexibles Monorepo zum Experimentieren mit MCP (Model Context Protocol): Projekte als Git-Submodule und eigenständige Repos, alles an einem Ort orchestriert.`,
+    tags: ['TypeScript', 'Shell', 'YAML'],
+    code: 'https://github.com/dizzi1222/workspace',
+    live: '',
+    image: '/modal-workspace.png',
+    status: 'En desarrollo',
+    statusEn: 'In development',
+    statusDe: 'In Entwicklung',
+    year: 2026,
+    category: 'Workspace',
+    categoryEn: 'Workspace',
+    categoryDe: 'Workspace',
+    teamSize: 'Solo',
+    teamSizeEn: 'Solo',
+    teamSizeDe: 'Allein'
   }
 
 ];
