@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import type { RequestEvent } from '@sveltejs/kit';
-import { RESEND_API_KEY, CONTACT_EMAIL_TO } from '$env/static/private';
-
-const resend = new Resend(RESEND_API_KEY);
+import { env } from '$env/dynamic/private';
 
 export async function POST({ request }: RequestEvent) {
   try {
@@ -21,9 +19,15 @@ export async function POST({ request }: RequestEvent) {
       return new Response(JSON.stringify({ error: 'Message too long' }), { status: 400 });
     }
 
+    if (!env.RESEND_API_KEY) {
+      return new Response(JSON.stringify({ error: 'Email service not configured' }), { status: 503 });
+    }
+
+    const resend = new Resend(env.RESEND_API_KEY);
+
     await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: CONTACT_EMAIL_TO || 'diegosamuel042@gmail.com',
+      to: env.CONTACT_EMAIL_TO || 'diegosamuel042@gmail.com',
       subject: `[Portfolio] ${name} — ${email}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message}</p>`
     });
